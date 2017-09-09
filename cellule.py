@@ -1,13 +1,10 @@
-
-
 class Cellule:
-    def __init__(self,colour,age,max_age,energy,coord_x,coord_y,immune=None):
+    def __init__(self,colour,age,max_age,energy,coord_x,coord_y):
         self.age = age
         self.energy = energy
         self.colour = colour
         self.coord_x = coord_x
         self.coord_y = coord_y
-        self.immune = immune
 
 	def survie(self,energy):
 		self.energy =+ 2
