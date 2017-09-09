@@ -1,4 +1,4 @@
 # game-of-life
-# Quentin & Flo 
+# Quentin & Flo
 
-
+Trying to do shit
