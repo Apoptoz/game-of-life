@@ -1,5 +1,3 @@
-
-
 class Substrat:
 
 	def __init__(self, contenu,coord_x,coord_y):
