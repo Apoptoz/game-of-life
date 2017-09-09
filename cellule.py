@@ -26,4 +26,14 @@ class Cellule:
 
 
 
+    def death(self):
+        print("mort")
+
+    def reproduce(self):
+        print("reproduce")
+
+    def move(self):
+        print("move")
+
+
 blanche = Cellule("B",0,20,3,10,10,immune=random_colour)
