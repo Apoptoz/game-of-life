@@ -1,2 +1,4 @@
 # game-of-life
-# flo
+# Quentin & Flo 
+
+
