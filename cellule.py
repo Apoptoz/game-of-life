@@ -1,13 +1,12 @@
 
 
 class Cellule:
-    def __init__(self,colour,age,max_age,energy,coord_x,coord_y,immune=None):
+    def __init__(self,colour,age,max_age,energy,coord_x,coord_y):
         self.age = age
         self.energy = energy
         self.colour = colour
         self.coord_x = coord_x
         self.coord_y = coord_y
-        self.immune = immune
 
 	def survie(self,energy):
 		self.energy =+ 2
@@ -24,8 +23,6 @@ class Cellule:
     #CelluleRouge : cellule enlevant 1 point d'énergie supplémentaire à une cellule d'une autre couleur (en plus du point de dommage lors de l'affrontement)
     #CelluleVerte : cellule ayant un niveau d'énergie supplémentaire (3 points de plus que les autres couleurs)
 
-
-
     def death(self):
         print("mort")
 
@@ -34,6 +31,26 @@ class Cellule:
 
     def move(self):
         print("move")
+
+
+
+class maCelluleBlanche(Cellule):
+    def __init__(self,coord_x,coord_y):
+        Cellule.__init__(self,"W",0,10,3,coord_x,coord_y)
+        self.immune = random_colour() #définir la fonction random_colour
+
+
+class CelluleNoire(Cellule):
+    def __init__(self,coord_x,coord_y):
+        Cellule.__init__(self,"N",0,10,3,coord_x,coord_y)
+
+    def mort(self):
+        print("mort noire")
+
+class CelluleRouge(Cellule):
+    def __init__(self,coord_x,coord_y):
+        Cellule.__init__(self,"R",0,10,3,coord_x,coord_y)
+
 
 
 blanche = Cellule("B",0,20,3,10,10,immune=random_colour)
