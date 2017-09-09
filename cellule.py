@@ -1,5 +1,3 @@
-
-
 class Cellule:
     def __init__(self,colour,age,max_age,energy,coord_x,coord_y):
         self.age = age
