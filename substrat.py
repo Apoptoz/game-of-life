@@ -1,11 +1,12 @@
 
-
 class Substrat:
 
 	def __init__(self, contenu,coord_x,coord_y):
-		self.contenu = contenu #Liste du contenu de la case
+		#Liste des cellules présentes
+		self.contenu = contenu 
 		self.coord_x = coord_x
 		self.coord_y = coord_y
+		self.nb_food = nb_food
 
 
 
