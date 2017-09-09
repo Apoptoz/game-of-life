@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa0e189ba2ebc17e91785e4afe63be74cc7be698
 class Substrat:
 
 	def __init__(self, contenu,coord_x,coord_y):
