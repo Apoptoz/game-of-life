@@ -22,12 +22,14 @@ if __name__ == '__main__':
         textpos = text.get_rect(centerx=background.get_width()/2)
         background.blit(text,textpos)
 
+    #HAUTEUR_GRILLE
+    #LARGEUR_GRILLE
 
     grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
-    #for i in range (18): #ligne
-    for j in range (28): #colonne
-        case = pygame.draw.rect(background,(255,255,255),(20+20*j,20,40+20*j,40),1)
-
+    for i in range (17): #LARGEUR_GRILLE 18
+        ligne = colonne = pygame.draw.line(background, (255,255,255),(20,40+20*i),(579,40+20*i),1)
+    for i in range (27): #HAUTEUR_GRILLE 28
+        colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
     screen.blit(background,(0,0))
     pygame.display.flip()
