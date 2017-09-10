@@ -4,8 +4,8 @@ import os
 import pygame
 from pygame.locals import *
 
-HAUTEUR_GRILLE = 20
-LARGEUR_GRILLE = 30
+NB_LIGNE = 18
+NB_COLONNE = 28
 
 
 if __name__ == '__main__:
@@ -26,11 +26,12 @@ if __name__ == '__main__:
         background.blit(text,textpos)
 
 
-    grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
-    #for i in range (18): #ligne
-    for j in range (28): #colonne
-        case = pygame.draw.rect(background,(255,255,255),(20+20*j,20,40+20*j,40),1)
 
+    grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
+    for i in range (NB_LIGNE-1):
+        ligne = colonne = pygame.draw.line(background, (255,255,255),(20,40+20*i),(579,40+20*i),1)
+    for i in range (NB_COLONNE-1):
+        colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
     screen.blit(background,(0,0))
     pygame.display.flip()
