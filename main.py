@@ -4,8 +4,8 @@ import os
 import pygame
 from pygame.locals import *
 
-HAUTEUR_GRILLE = 20
-LARGEUR_GRILLE = 30
+NB_LIGNE = 18
+NB_COLONNE = 28
 
 
 if __name__ == '__main__':
@@ -25,13 +25,12 @@ if __name__ == '__main__':
         textpos = text.get_rect(centerx=background.get_width()/2)
         background.blit(text,textpos)
 
-    #HAUTEUR_GRILLE
-    #LARGEUR_GRILLE
+
 
     grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
-    for i in range (17): #LARGEUR_GRILLE 18
+    for i in range (NB_LIGNE-1):
         ligne = colonne = pygame.draw.line(background, (255,255,255),(20,40+20*i),(579,40+20*i),1)
-    for i in range (27): #HAUTEUR_GRILLE 28
+    for i in range (NB_COLONNE-1):
         colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
     screen.blit(background,(0,0))
