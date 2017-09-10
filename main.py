@@ -4,9 +4,16 @@ import os
 import pygame
 from pygame.locals import *
 
+import population
+
 NB_LIGNE = 18
 NB_COLONNE = 28
 
+NB_WHITE = 10
+NB_BLUE = 11
+NB_BLACK = 12
+NB_RED = 13
+NB_GREEN = 14
 
 if __name__ == '__main__':
 
@@ -33,10 +40,51 @@ if __name__ == '__main__':
     for i in range (NB_COLONNE-1):
         colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
+
+    white_ball = pygame.image.load("data/white_cell.png")
+    blue_ball = pygame.image.load("data/blue_cell.png")
+    black_ball = pygame.image.load("data/black_cell.png")
+    red_ball = pygame.image.load("data/red_cell.png")
+    green_ball = pygame.image.load("data/green_cell.png")
+
+
+    pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
+    for cellule in pop:
+        if cellule.colour == "W":
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(white_ball, (x,y))
+
+        if cellule.colour == "B":
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(blue_ball, (x,y))
+
+        if cellule.colour == "N":
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(black_ball, (x,y))
+            
+        if cellule.colour == "R":
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(red_ball, (x,y))
+
+        if cellule.colour == "G":
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(green_ball, (x,y))
+
+
+
+
     screen.blit(background,(0,0))
     pygame.display.flip()
-
-
 
 
 

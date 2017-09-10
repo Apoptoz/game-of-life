@@ -1,7 +1,5 @@
 import random
 
-
-
 MAX_AGE = 10
 BASE_ENERGY = 3
 
