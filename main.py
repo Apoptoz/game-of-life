@@ -24,15 +24,21 @@ if __name__ == '__main__':
 
 
     grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
+    #for i in range (18): #ligne
+    for j in range (28): #colonne
+        case = pygame.draw.rect(background,(255,255,255),(20+20*j,20,40+20*j,40),1)
+
+
     screen.blit(background,(0,0))
     pygame.display.flip()
 
+
+
+
+
     while continuer:
         for event in pygame.event.get():
-            if event.type == QUIT:#Si un de ces événements est de type QUIT
+            if event.type == QUIT: #Si un de ces événements est de type QUIT
                 continuer = 0
-
-
-
 
     quit()
