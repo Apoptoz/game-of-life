@@ -1,3 +1,6 @@
+import random
+
+
 
 MAX_AGE = 10
 BASE_ENERGY = 3
@@ -74,8 +77,9 @@ class CelluleVerte(Cellule):
 
 
 def random_colour(colour_to_remove):
-    colour_set={"W","B","G","N","R"}
-    
+    colour_set={"W","B","G","N","R"} - {colour_to_remove}
+    chosen_colour = random.sample(colour_set,1)
+    return chosen_colour
 
 
 blanche = Cellule("B",0,20,3,10,10,immune=random_colour)
