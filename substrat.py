@@ -1,6 +1,6 @@
 class Substrat:
 
-	def __init__(self, cells_on_case,coord):
+	def __init__(self, cells_on_case,coord,nb_food=0):
 		#Liste des cellules présentes
 		self.cells_on_case = cells_on_case
 		self.coord_x = coord[0]
