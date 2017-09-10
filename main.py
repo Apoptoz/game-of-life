@@ -41,11 +41,11 @@ if __name__ == '__main__':
         colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
 
-    white_ball = pygame.image.load("data/white_cell.png")
-    blue_ball = pygame.image.load("data/blue_cell.png")
-    black_ball = pygame.image.load("data/black_cell.png")
-    red_ball = pygame.image.load("data/red_cell.png")
-    green_ball = pygame.image.load("data/green_cell.png")
+    white_cell = pygame.image.load("data/white_cell.png")
+    blue_cell = pygame.image.load("data/blue_cell.png")
+    black_cell = pygame.image.load("data/black_cell.png")
+    red_cell = pygame.image.load("data/red_cell.png")
+    green_cell = pygame.image.load("data/green_cell.png")
 
 
     pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
@@ -53,21 +53,12 @@ if __name__ == '__main__':
         print(cellule)
         x = cellule.coord_x * 20 + 20
         y = cellule.coord_y * 20 + 20
-
-        if cellule.colour == "W":
-            background.blit(white_ball, (x,y))
-
-        if cellule.colour == "B":
-            background.blit(blue_ball, (x,y))
-
-        if cellule.colour == "N":
-            background.blit(black_ball, (x,y))
-
-        if cellule.colour == "R":
-            background.blit(red_ball, (x,y))
-
-        if cellule.colour == "G":
-            background.blit(green_ball, (x,y))
+        map_to_colour = { "W":white_cell,
+        "B":blue_cell,
+        "N":black_cell,
+        "R":red_cell,
+        "G":green_cell}
+        background.blit(map_to_colour[cellule.colour]), (x,y))
 
 
 
