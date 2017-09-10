@@ -50,34 +50,23 @@ if __name__ == '__main__':
 
     pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
     for cellule in pop:
+        print(cellule)
+        x = cellule.coord_x * 20 + 20
+        y = cellule.coord_y * 20 + 20
+
         if cellule.colour == "W":
-            print(cellule)
-            x = cellule.coord_x * 20 + 20
-            y = cellule.coord_y * 20 + 20
             background.blit(white_ball, (x,y))
 
         if cellule.colour == "B":
-            print(cellule)
-            x = cellule.coord_x * 20 + 20
-            y = cellule.coord_y * 20 + 20
             background.blit(blue_ball, (x,y))
 
         if cellule.colour == "N":
-            print(cellule)
-            x = cellule.coord_x * 20 + 20
-            y = cellule.coord_y * 20 + 20
             background.blit(black_ball, (x,y))
-            
+
         if cellule.colour == "R":
-            print(cellule)
-            x = cellule.coord_x * 20 + 20
-            y = cellule.coord_y * 20 + 20
             background.blit(red_ball, (x,y))
 
         if cellule.colour == "G":
-            print(cellule)
-            x = cellule.coord_x * 20 + 20
-            y = cellule.coord_y * 20 + 20
             background.blit(green_ball, (x,y))
 
 
