@@ -10,18 +10,17 @@ class Cellule:
     def __init__(self,colour,age,max_age,energy,coord_x,coord_y):
         self.age = age
         self.energy = energy
+        self.max_age = max_age
         self.colour = colour
         self.coord_x = coord_x
         self.coord_y = coord_y
 
-	def eat(self):
-		self.energy += 2
-#Survie : toute cellule seule dans une case comportant de la nourriture voit son niveau d'énergie augmenter de 2 et le niveau d'énergie de la case diminué de 1.
-
-	def fight(self):
-		self.energy -= 1
-#Affrontement : toute case occupée par deux cellules de couleur différente voit le niveau d'énergie de chaque cellule diminué d'1 point (sauf capacité spéciale propre à chaque couleur de cellule, cf. définition des cellules).
-
+    def eat(self):
+	       self.energy += 2
+           #Survie : toute cellule seule dans une case comportant de la nourriture voit son niveau d'énergie augmenter de 2 et le niveau d'énergie de la case diminué de 1.
+    def fight(self):
+        print("se bat")
+        #Affrontement : toute case occupée par deux cellules de couleur différente voit le niveau d'énergie de chaque cellule diminué d'1 point (sauf capacité spéciale propre à chaque couleur de cellule, cf. définition des cellules).
 
     #CelluleBlanche : cellule immunisée à l'une des 4 autres couleurs,choisie au hasard pour chaque instance de CelluleBlanche
     #CelluleBleue : celle-ci comporte une autre couleur à sa naissance, qu'elle fournira à une cellule d'une autre couleur que bleue. Si la couleur correspond, elle subit la règle de dommage lors de l'affrontement mais elle peut se reproduire et donner naissance à une cellule bleue
@@ -82,4 +81,4 @@ def random_colour(colour_to_remove):
     return chosen_colour
 
 
-blanche = Cellule("B",0,20,3,10,10,immune=random_colour)
+blanche = Cellule("B",0,20,3,10,10)
