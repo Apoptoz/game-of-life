@@ -15,6 +15,9 @@ class Cellule:
         self.coord_x = coord[0]
         self.coord_y = coord[1]
 
+    def __str__(self):
+        return "coord :"+str(self.coord_x)+" "+str(self.coord_y)
+
     def eat(self):
 	       self.energy += 2
            #Survie : toute cellule seule dans une case comportant de la nourriture voit son niveau d'énergie augmenter de 2 et le niveau d'énergie de la case diminué de 1.
