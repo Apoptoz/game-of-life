@@ -15,4 +15,4 @@ class Grille:
 		self.grille = [Substrat(None,(i,j)) for i in range(HAUTEUR_GRILLE) for j in range(LARGEUR_GRILLE)]
 
 
-grille = [[Substrat(None,(i,j)) for i in range(TAILLE_GRILLE)] for j in range(TAILLE_GRILLE)]
+grille = [[Substrat(None,(i,j)) for i in range(HAUTEUR_GRILLE)] for j in range(LARGEUR_GRILLE)]

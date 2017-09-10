@@ -8,8 +8,8 @@ NB_LIGNE = 18
 NB_COLONNE = 28
 
 
-if __name__ == '__main__':
-
+if __name__ == '__main__:
+    
     pygame.init()
 
     #clock = pygame.time.Clock()
