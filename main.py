@@ -58,7 +58,7 @@ if __name__ == '__main__':
         "N":black_cell,
         "R":red_cell,
         "G":green_cell}
-        background.blit(map_to_colour[cellule.colour]), (x,y))
+        background.blit(map_to_colour[cellule.colour], (x,y))
 
 
 
