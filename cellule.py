@@ -40,13 +40,13 @@ class Cellule:
 
 
 class CelluleBlanche(Cellule):
-    def __init__(self,coord_x,coord_y):
+    def __init__(self,coord):
         Cellule.__init__(self,"W",0,MAX_AGE+10,BASE_ENERGY,coord)
         self.immune = random_colour("W") #définir la fonction random_colour
 
 
 class CelluleBleue(Cellule):
-    def __init__(self,coord_x,coord_y):
+    def __init__(self,coord):
         Cellule.__init__(self,"B",0,MAX_AGE,BASE_ENERGY,coord)
         self.chromia = random_colour("B")
 
@@ -54,7 +54,7 @@ class CelluleBleue(Cellule):
         print("déplacement bleue")
 
 class CelluleNoire(Cellule):
-    def __init__(self,coord_x,coord_y):
+    def __init__(self,coord):
         Cellule.__init__(self,"N",0,MAX_AGE,BASE_ENERGY,coord)
 
     def mort(self):
@@ -64,14 +64,14 @@ class CelluleNoire(Cellule):
         print("reproduction noire")
 
 class CelluleRouge(Cellule):
-    def __init__(self,coord_x,coord_y):
+    def __init__(self,coord):
         Cellule.__init__(self,"R",0,MAX_AGE,BASE_ENERGY,coord)
 
     def fight(self):
         print("affrontement rouge")
 
 class CelluleVerte(Cellule):
-    def __init__(self,coord_x,coord_y):
+    def __init__(self,coord):
         Cellule.__init__(self,"G",0,MAX_AGE,BASE_ENERGY+3,coord)
 
 
