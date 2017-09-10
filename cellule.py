@@ -7,13 +7,13 @@ BASE_ENERGY = 3
 
 
 class Cellule:
-    def __init__(self,colour,age,max_age,energy,coord_x,coord_y):
+    def __init__(self,colour,age,max_age,energy,coord):
         self.age = age
         self.energy = energy
         self.max_age = max_age
         self.colour = colour
-        self.coord_x = coord_x
-        self.coord_y = coord_y
+        self.coord_x = coord[0]
+        self.coord_y = coord[1]
 
     def eat(self):
 	       self.energy += 2
@@ -41,13 +41,13 @@ class Cellule:
 
 class CelluleBlanche(Cellule):
     def __init__(self,coord_x,coord_y):
-        Cellule.__init__(self,"W",0,MAX_AGE+10,BASE_ENERGY,coord_x,coord_y)
+        Cellule.__init__(self,"W",0,MAX_AGE+10,BASE_ENERGY,coord)
         self.immune = random_colour("W") #définir la fonction random_colour
 
 
 class CelluleBleue(Cellule):
     def __init__(self,coord_x,coord_y):
-        Cellule.__init__(self,"B",0,MAX_AGE,BASE_ENERGY,coord_x,coord_y)
+        Cellule.__init__(self,"B",0,MAX_AGE,BASE_ENERGY,coord)
         self.chromia = random_colour("B")
 
     def move(self):
@@ -55,7 +55,7 @@ class CelluleBleue(Cellule):
 
 class CelluleNoire(Cellule):
     def __init__(self,coord_x,coord_y):
-        Cellule.__init__(self,"N",0,MAX_AGE,BASE_ENERGY,coord_x,coord_y)
+        Cellule.__init__(self,"N",0,MAX_AGE,BASE_ENERGY,coord)
 
     def mort(self):
         print("mort noire")
@@ -65,14 +65,14 @@ class CelluleNoire(Cellule):
 
 class CelluleRouge(Cellule):
     def __init__(self,coord_x,coord_y):
-        Cellule.__init__(self,"R",0,MAX_AGE,BASE_ENERGY,coord_x,coord_y)
+        Cellule.__init__(self,"R",0,MAX_AGE,BASE_ENERGY,coord)
 
     def fight(self):
         print("affrontement rouge")
 
 class CelluleVerte(Cellule):
     def __init__(self,coord_x,coord_y):
-        Cellule.__init__(self,"G",0,MAX_AGE,BASE_ENERGY+3,coord_x,coord_y)
+        Cellule.__init__(self,"G",0,MAX_AGE,BASE_ENERGY+3,coord)
 
 
 def random_colour(colour_to_remove):
@@ -81,4 +81,4 @@ def random_colour(colour_to_remove):
     return chosen_colour
 
 
-blanche = Cellule("B",0,20,3,10,10)
+blanche = Cellule("B",0,20,3,(10,10))
