@@ -8,8 +8,8 @@ HAUTEUR_GRILLE = 20
 LARGEUR_GRILLE = 30
 
 
-if __name__ == '__main__':
-
+if __name__ == '__main__:
+    
     pygame.init()
 
     #clock = pygame.time.Clock()
