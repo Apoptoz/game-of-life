@@ -48,7 +48,7 @@ def init_pop(pop_list):
 TAILLE_GRILLE =  20
 
 def random_pos(pos_list):
-    (x,y) = (randint(0,TAILLE_GRILLE),randint(0,TAILLE_GRILLE))
+    (x,y) = (randint(0,NB_COLONNE-1),randint(0,NB_LIGNE-1))
     while (x,y) in pos_list:
         (x,y) = (randint(0,TAILLE_GRILLE),randint(0,TAILLE_GRILLE))
     return (x,y)
