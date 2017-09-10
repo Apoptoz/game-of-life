@@ -4,6 +4,9 @@ import os
 import pygame
 from pygame.locals import *
 
+HAUTEUR_GRILLE = 20
+LARGEUR_GRILLE = 30
+
 
 if __name__ == '__main__':
 

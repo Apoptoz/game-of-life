@@ -1,3 +1,5 @@
+from main import LARGEUR_GRILLE,HAUTEUR_GRILLE
+
 class Substrat:
 
 	def __init__(self, cells_on_case,coord,nb_food=0):
@@ -10,8 +12,7 @@ class Substrat:
 #Y a pas besoin de faire une classe grille en fait ????
 class Grille:
 	def __init__(self,TAILLE_GRILLE):
-		self.grille = [Substrat(None,(i,j)) for i in range(TAILLE_GRILLE) for j in range(TAILLE_GRILLE)]
+		self.grille = [Substrat(None,(i,j)) for i in range(HAUTEUR_GRILLE) for j in range(LARGEUR_GRILLE)]
 
-TAILLE_GRILLE = 20 #Taille du tableau
 
 grille = [[Substrat(None,(i,j)) for i in range(TAILLE_GRILLE)] for j in range(TAILLE_GRILLE)]
