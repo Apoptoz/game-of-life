@@ -9,7 +9,8 @@ if __name__ == '__main__':
 
     pygame.init()
 
-    clock = pygame.time.Clock()
+    #clock = pygame.time.Clock()
+    continuer = 1
 
     screen = pygame.display.set_mode((600,400))
     pygame.display.set_caption('Flo is Life,Quentin is Game')
@@ -26,8 +27,10 @@ if __name__ == '__main__':
     screen.blit(background,(0,0))
     pygame.display.flip()
 
-    while 1:
-        clock.tick(500)
+    while continuer:
+        for event in pygame.event.get():
+            if event.type == QUIT:#Si un de ces événements est de type QUIT
+                continuer = 0
 
 
 
