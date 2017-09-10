@@ -14,4 +14,4 @@ class Grille:
 
 TAILLE_GRILLE = 20 #Taille du tableau
 
-grille = [Substrat(None,(i,j)) for i in range(TAILLE_GRILLE) for j in range(TAILLE_GRILLE)]
+grille = [[Substrat(None,(i,j)) for i in range(TAILLE_GRILLE)] for j in range(TAILLE_GRILLE)]
