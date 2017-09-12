@@ -36,8 +36,8 @@ class Cellule:
         print("reproduce")
 
     def move(self):
-        print("move")
 
+        if (self.energy >=1 ):
 
 
 class CelluleBlanche(Cellule):
