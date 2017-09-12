@@ -41,7 +41,11 @@ class Cellule:
         if self.energy => 1:
             self.energy -= 1
             if(1):
-            elif(2):
+            elif(is_food_and_friend(cases_autour)):
+                for case in cases_autour:
+                    if grille[case.coord_x][case.coord_y].nb_food > 0:
+                        self.coord_x = case.coord_x
+                        self.coord_y = case.coord_y
             elif(3):
             elif(4):
             elif(5):
@@ -85,6 +89,12 @@ def random_colour(colour_to_remove):
     colour_set={"W","B","G","N","R"} - {colour_to_remove}
     chosen_colour = random.sample(colour_set,1)
     return chosen_colour
+
+def is_food_and_friend(cases_atour):
+    for case in cases_autour:
+        if grille[case.coord_x][case.coord_y].nb_food > 0:
+            return True
+    return False
 
 
 blanche = Cellule("B",0,20,3,(10,10))

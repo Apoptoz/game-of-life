@@ -10,7 +10,7 @@ class Population:
     def __getitem__(self,key):
         return self.pop[key]
 
-    def __setitem__(self,key,item):
+    def _setitem__(self,key,item):
         self.pop[key] = item
 
     def __len__(self): return len(self.pop)
