@@ -15,6 +15,20 @@ NB_BLACK = 12
 NB_RED = 13
 NB_GREEN = 14
 
+map_to_colour = { "W":white_cell,
+"B":blue_cell,
+"N":black_cell,
+"R":red_cell,
+"G":green_cell}
+
+def afficher_cell(pop,background):
+        for cellule in pop:
+            print(cellule)
+            x = cellule.coord_x * 20 + 20
+            y = cellule.coord_y * 20 + 20
+            background.blit(map_to_colour[cellule.colour], (x,y))
+
+
 if __name__ == '__main__':
 
     pygame.init()
@@ -48,17 +62,11 @@ if __name__ == '__main__':
     green_cell = pygame.image.load("data/green_cell.png")
 
 
-    pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
-    for cellule in pop:
-        print(cellule)
-        x = cellule.coord_x * 20 + 20
-        y = cellule.coord_y * 20 + 20
-        map_to_colour = { "W":white_cell,
-        "B":blue_cell,
-        "N":black_cell,
-        "R":red_cell,
-        "G":green_cell}
-        background.blit(map_to_colour[cellule.colour], (x,y))
+    init_pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
+
+    afficher_cell(pop,background)
+
+
 
 
 
