@@ -37,7 +37,7 @@ class Cellule:
 
     def move(self):
 
-        if (self.energy >=1 ):
+        if (self.energy >= 1 ):
 
 
 class CelluleBlanche(Cellule):
