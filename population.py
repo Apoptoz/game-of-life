@@ -21,7 +21,6 @@ class Population:
     def __iter__(self): return iter(self.pop)
     def __next__(self): return next(self.pop)
 
-
 def init_pop(self):
     pos_list = []
     cell_population=[]

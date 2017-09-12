@@ -90,11 +90,15 @@ def random_colour(colour_to_remove):
     chosen_colour = random.sample(colour_set,1)
     return chosen_colour
 
-def is_food_and_friend(cases_atour):
+def is_food_and_friend(cases_atour,cell_colour):
     for case in cases_autour:
-        if grille[case.coord_x][case.coord_y].nb_food > 0:
-            return True
+        case_grille = grille[case.coord_x][case.coord_y]
+        if case_grille.nb_food > 0:
+            if len(case_grille.cells_on_case) == 1 and case_grille.cells_on_case.colour == cell_colour):
+                return case.coord_x,case.coord_y
     return False
+
+def is_only_friend(cases_autour):
 
 
 blanche = Cellule("B",0,20,3,(10,10))
