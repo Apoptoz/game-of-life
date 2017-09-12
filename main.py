@@ -15,6 +15,12 @@ NB_BLACK = 12
 NB_RED = 13
 NB_GREEN = 14
 
+white_cell = pygame.image.load("data/white_cell.png")
+blue_cell = pygame.image.load("data/blue_cell.png")
+black_cell = pygame.image.load("data/black_cell.png")
+red_cell = pygame.image.load("data/red_cell.png")
+green_cell = pygame.image.load("data/green_cell.png")
+
 map_to_colour = { "W":white_cell,
 "B":blue_cell,
 "N":black_cell,
@@ -40,36 +46,15 @@ if __name__ == '__main__':
     pygame.display.set_caption('Flo is Life,Quentin is Game')
     background = pygame.Surface(screen.get_size())
 
-    if pygame.font:
-        font = pygame.font.Font(None,36)
-        text = font.render("F&Q's Game of Life",1,(10,10,10))
-        textpos = text.get_rect(centerx=background.get_width()/2)
-        background.blit(text,textpos)
-
-
-
     grid = pygame.draw.rect(background,(255,255,255),(20,20,560,360),1)
     for i in range (NB_LIGNE-1):
         ligne = colonne = pygame.draw.line(background, (255,255,255),(20,40+20*i),(579,40+20*i),1)
     for i in range (NB_COLONNE-1):
         colonne = pygame.draw.line(background, (255,255,255),(40+20*i,20),(40+20*i,379),1)
 
-
-    white_cell = pygame.image.load("data/white_cell.png")
-    blue_cell = pygame.image.load("data/blue_cell.png")
-    black_cell = pygame.image.load("data/black_cell.png")
-    red_cell = pygame.image.load("data/red_cell.png")
-    green_cell = pygame.image.load("data/green_cell.png")
-
-
     init_pop = population.Population([NB_WHITE,NB_BLUE,NB_BLACK,NB_RED,NB_GREEN])
 
     afficher_cell(pop,background)
-
-
-
-
-
 
     screen.blit(background,(0,0))
     pygame.display.flip()

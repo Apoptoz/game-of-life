@@ -1,4 +1,5 @@
 import random
+from substrat import grille,cases_adjacentes
 
 MAX_AGE = 10
 BASE_ENERGY = 3
@@ -36,8 +37,17 @@ class Cellule:
         print("reproduce")
 
     def move(self):
-
-        if (self.energy >=1 ):
+        cases_autour = cases_adjacentes(self.coord_x,self.coord_y)
+        if self.energy => 1:
+            self.energy -= 1
+            if(1):
+            elif(2):
+            elif(3):
+            elif(4):
+            elif(5):
+            elif(6):
+            elif(7):
+            else:
 
 
 class CelluleBlanche(Cellule):
