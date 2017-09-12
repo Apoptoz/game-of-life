@@ -9,8 +9,7 @@ class Substrat:
 		self.coord_y = coord[1]
 		self.nb_food = nb_food
 
-
-grille = [[Substrat(None,(i,j)) for i in range(HAUTEUR_GRILLE)] for j in range(LARGEUR_GRILLE)]
+grille = [[Substrat([],(i,j)) for i in range(HAUTEUR_GRILLE)] for j in range(LARGEUR_GRILLE)]
 
 #Défini les cases adjacentes à (i,j)
 def cases_adjacentes(i,j):
