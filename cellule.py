@@ -40,7 +40,9 @@ class Cellule:
         cases_autour = cases_adjacentes(self.coord_x,self.coord_y)
         if self.energy => 1:
             self.energy -= 1
-            if(1):
+            if(grille[self.coord_x][self.coord_y].nb_food >= 1):
+                #rien ?
+
             elif(is_food_and_friend(cases_autour)):
                 for case in cases_autour:
                     if grille[case.coord_x][case.coord_y].nb_food > 0:
